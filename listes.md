@@ -530,3 +530,45 @@ def intersection(l1,l2):
 print(intersection(l1,l2))
 ```
 3. [Union de listes](ex4.3)
+
+exercice 1 :
+   def verifier(l):
+  for i in range(len(l)-1):
+    if l[i]>l[i+1]:
+      return False
+  return True
+verifier([0, 5, 8, 8, 9])
+
+
+
+exercice 2 :
+def dep1(l):
+  d=dict()
+  for i in l:
+    if i in d:
+      d[i]+=1
+    else:
+      d[i]=1
+  return d
+print("sol 1", dep1(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']))
+
+
+
+def dep2(l):
+  d =dict()
+  for e in l:
+    if e not in d:
+      d[e]=l.count(e)
+  return d
+print("sol 2",dep2(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']))
+
+
+def dep3(l):
+  d =dict()
+  for e in l:
+    if e not in d:
+      d[e]=1
+    else:
+      d[e]+=1
+  return d
+print("sol 3",dep3(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']))
